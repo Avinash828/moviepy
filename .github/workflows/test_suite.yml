@@ -97,7 +97,7 @@ jobs:
                 python3.8 -m pip install --upgrade pip && \
                 python3.8 --version && \
                 uname -m && \
-                python3.8 -m pip install pytest && \ 
+                python3.8 -m pip install pytest && \
                 python3.8 setup.py install && \
                 python3.8 -m pip install --upgrade wheel setuptools && \
                 python3.8 -m pip install python-dotenv && \
