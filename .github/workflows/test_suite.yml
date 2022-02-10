@@ -99,8 +99,11 @@ jobs:
                 uname -m && \
                 python3.8 -m pip install pytest && \ 
                 python3.8 setup.py install && \
-                python3.8 -m pip install --upgrade wheel setuptools && \  python3.8 -m pip install python-dotenv && \
-                python3.8 -m pip install -e .[test] && \ apt install ffmpeg && \ apt install Imagemagick && \
+                python3.8 -m pip install --upgrade wheel setuptools && \
+                python3.8 -m pip install python-dotenv && \
+                python3.8 -m pip install -e .[test] && \
+                apt install ffmpeg && \
+                apt install Imagemagick && \
                 python3.8 -m pytest --doctest-glob "moviepy/**/**.py" --cov moviepy --cov-report term-missing && \
                 deactivate'
 
