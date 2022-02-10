@@ -103,7 +103,7 @@ jobs:
                 python3.8 -m pip install python-dotenv && \
                 python3.8 -m pip install -e .[test] && \
                 apt install ffmpeg -y && \
-                apt install Imagemagick -y && \
+                apt install imagemagick -y && \
                 python3.8 -m pytest --doctest-glob "moviepy/**/**.py" --cov moviepy --cov-report term-missing && \
                 deactivate'
 
