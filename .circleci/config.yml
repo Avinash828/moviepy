@@ -26,8 +26,8 @@ jobs:
             python3 -m pip install python-dotenv
             python3 -m pip install -e .[test]
             python3 -m pip install ".[test, optional, doc]"
-            apt install ffmpeg
-            apt install imagemagick
+            apt install ffmpeg --allow-downgrades
+            apt install imagemagick --allow-downgrades
             python3 -m pytest --doctest-glob "moviepy/**/**.py" --cov moviepy --cov-report term-missing
             
 workflows:
