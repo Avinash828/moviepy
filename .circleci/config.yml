@@ -34,4 +34,4 @@ workflows:
   version: 2
   python3.7:
     jobs:
-      - build for many_linux
+      - build-medium-arm64
