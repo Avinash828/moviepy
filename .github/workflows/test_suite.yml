@@ -105,6 +105,9 @@ jobs:
                 python3.8 -m pip install ".[test, optional, doc]" && \
                 apt install ffmpeg -y && \
                 apt install imagemagick -y && \
+                cat /etc/ImageMagick-6/policy.xml \
+                | sed 's/none/read,write/g' \
+                | tee /etc/ImageMagick-6/policy.xml && \
                 python3.8 -m pytest --doctest-glob "moviepy/**/**.py" --cov moviepy --cov-report term-missing && \
                 deactivate'
 
